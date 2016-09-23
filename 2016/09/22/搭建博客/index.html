@@ -21,7 +21,7 @@
 首先需要安装node.js,官方下载地址:www.nodejs.org,下载后按照默认选项下一步安装即可.
 然后是下载github,具体步骤不再详细说明,参照h">
 <meta property="og:image" content="https://garenyang.github.io/images/hexogithub.png">
-<meta property="og:updated_time" content="2016-09-23T02:39:31.785Z">
+<meta property="og:updated_time" content="2016-09-23T05:00:05.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建博客">
 <meta name="twitter:description" content="使用hexo和github搭建个人博客现在有很多博客直接注册就能使用,为什么还要自己动手搭建博客呢,我想说本人纯属闲着无聊想找点事做,所以就研究了一下自己搭建博客,现将搭建过程分享,仅供参考.
@@ -176,7 +176,7 @@
 <p>效果<br><img src="/images/1234567890.png" alt="image"></p>
 <p>下面就要构建github环境了,首先需要注册github账号,自行注册,这里不再说明.<br>注册登录github后创建一个repository<br><img src="/images/134567.png" alt="image"><br>创建的时候注意Repository的名字。比如我的Github账号是garenYang，那么我应该创建的Repository的名字是：garenYang.github.io。<br>创建完仓库后找到一个绿色按钮 cloneordownload复制里面的内容,如<a href="https://github.com/garenYang/garenYang.github.io.git" target="_blank" rel="external">https://github.com/garenYang/garenYang.github.io.git</a><br>然后到安装Hexo的目录下找到_config.yml的文件找到deploy: ,做如下修改<br><img src="/images/6784634.png" alt="image"><br>其中repository是刚才复制的内容.</p>
 <p>然后是设置Deploy keys<br>在Git Bash输入以下指令（任意位置点击鼠标右键），检查是否已经存在了SSH keys。<br>ls -al ~/.ssh<br>如果不存在就没有关系，如果存在的话，直接删除.ssh文件夹里面所有文件：我的.ssh文件夹目录C:\Users\yang.ssh<br>输入以下指令（邮箱就是你注册Github时候的邮箱）后，回车：<br>ssh-keygen -t rsa -C “xxx@163.com”<br>然后它会提示要你输入passphrase（我没有输入,直接回车，如果你输入的话，要记得，到时候会用到）。<br>然后键入以下指令：<br>ssh-agent -s</p>
-<p>ssh-add ~/.ssh/id_rsa<br>输入之后，在我这里是出错了，不知道你的有没有出错。<br><img src="/images/42166d224f4a20a4c110b91893529822730ed0e7.png" alt="image"><br>如果你的也是这样子出错了的话，就输入以下指令：<br>eval <code>ssh-agent -s</code></p>
+<p>ssh-add ~/.ssh/id_rsa<br>输入之后，在我这里是出错了，不知道你的有没有出错。<br><img src="/images/42166d224f4a20a4c110b91893529822730ed0e7.png" alt="image"><br>如果你的也是这样子出错了的话，就输入以下指令：<br>eval <code>ssh-agent -s</code>(eval 单引号,引号里内容是 ssh-agent -s)</p>
 <p>ssh-add</p>
 <p>到了这一步，就可以添加SSH key到你的Github账户了。键入以下指令，拷贝Key（先拷贝了，等一下可以直接粘贴）：<br>clip &lt; ~/.ssh/id_rsa.pub<br>然后到Github里面，找到Add deploy key点击,把刚才命令复制的内容粘贴上,title自定义,然后点击Add key：<br><img src="/images/12357567856.png" alt="image"></p>
 <p>最后还是测试一下吧，键入以下命令：<br>ssh -T git@github.com<br>你可能会看到有警告，没事，输入“yes”就好。</p>
