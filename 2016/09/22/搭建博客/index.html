@@ -21,7 +21,7 @@
 首先需要安装node.js,官方下载地址:www.nodejs.org,下载后按照默认选项下一步安装即可.
 然后是下载github,具体步骤不再详细说明,参照h">
 <meta property="og:image" content="https://garenyang.github.io/images/hexogithub.png">
-<meta property="og:updated_time" content="2016-09-23T02:34:30.705Z">
+<meta property="og:updated_time" content="2016-09-23T02:39:31.785Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="搭建博客">
 <meta name="twitter:description" content="使用hexo和github搭建个人博客现在有很多博客直接注册就能使用,为什么还要自己动手搭建博客呢,我想说本人纯属闲着无聊想找点事做,所以就研究了一下自己搭建博客,现将搭建过程分享,仅供参考.
@@ -186,7 +186,8 @@
 <p>部署完成后,博客就已经完全搭建起来了，在浏览器输入（当然，是你的用户名）：</p>
 <p><a href="http://garenYang.github.io/">http://garenYang.github.io/</a>  效果:<br><img src="/images/11111111112222.png" alt="image"></p>
 <p>更换博客主题:<br>可以到<a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a> 去选择主题,点击主题图片可以预览效果,选择想用的主题后点击左下角主题名字进入,找到cloneordownload 绿色按钮点击,复制链接,如<a href="https://github.com/Haojen/hexo-theme-Anisina.git" target="_blank" rel="external">https://github.com/Haojen/hexo-theme-Anisina.git</a></p>
-<p>在Hexo文件下打开gitbase,输入指令:<br>git clone <a href="https://github.com/Haojen/hexo-theme-Anisina.git" target="_blank" rel="external">https://github.com/Haojen/hexo-theme-Anisina.git</a> themes/主题名   就可以把主题下载下来,然后打开Hexo下的_config.yml,找到theme: 属性,把主题名换成你要用的那个主题名<br>然后用 hexo g -d 部署就可,如果部署报错,请到Hexo文件夹下找到themes文件夹,然后找到刚才下载的主题文件夹,打开看里面的_config.yml文件是否存在(本人下载的主题里面有时是_config.yml.example文件,把这个文件复制一份去掉.example即可),修改完成即可重新发布.</p>
+<p>在Hexo文件下打开gitbase,输入指令:<br>git clone <a href="https://github.com/Haojen/hexo-theme-Anisina.git" target="_blank" rel="external">https://github.com/Haojen/hexo-theme-Anisina.git</a> themes/主题名<br>就可以把主题下载下来,然后打开Hexo下的_config.yml,找到theme: 属性,把主题名换成你要用的那个主题名<br>然后用 hexo g -d 部署就可,如果部署报错,请到Hexo文件夹下找到themes文件夹,然后找到刚才下载的主题文件夹,打开看里面的_config.yml文件是否存在(本人下载的主题里面有时是_config.yml.example文件,把这个文件复制一份去掉.example即可),修改完成即可重新发布.</p>
+<p>写博客:<br>在Hexo文件夹下右键选择gitbase ,输入以下指令:<br>hexo new “文件名”<br>可创建博客,在F:\hexo\source_posts目录下可找到刚才创建的md文件,在里面写博客内容,写完保存,然后用指令:<br>hexo g -d 部署即可.</p>
 
         </div>
         <footer class="article-footer">
